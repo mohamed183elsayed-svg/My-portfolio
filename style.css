@@ -1,40 +1,96 @@
-/* ده عشان يظبط خلفية الصفحة كلها */
+/* إعدادات الصفحة */
 body {
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* لون أزرق متدرج */
-    color: white; /* لون الكلام أبيض */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    direction: rtl; /* اتجاه الكلام عربي */
+    direction: rtl;
 }
 
-/* تصميم الكارت اللي جوه الصفحة */
+/* الكارت الأساسي */
 .container {
-    background: rgba(0, 0, 0, 0.6); /* لون أسود شفاف */
-    padding: 50px;
-    border-radius: 20px; /* حواف دائرية */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* ظل للكارت */
+    background: rgba(255, 255, 255, 0.1); /* زجاجي */
+    backdrop-filter: blur(10px); /* تأثير ضبابي */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     text-align: center;
-    width: 300px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* تصميم الزرار */
+/* أيقونة البروفايل */
+.profile-img {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #4facfe;
+}
+
+/* قسم المهارات */
+.skills-section {
+    margin: 25px 0;
+    text-align: right;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ألوان المهارات */
+.html { background: #e34c26; color: white; }
+.css { background: #264de4; color: white; }
+.js { background: #f7df1e; color: black; }
+.git { background: #333; color: white; }
+
+/* الزرار */
 .btn {
     display: inline-block;
-    background: #ff4757; /* لون أحمر */
+    background: #00f260; /* لون أخضر نيون */
+    background: linear-gradient(to right, #00f260, #0575e6);
     color: white;
     text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 30px;
-    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 50px;
     font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 242, 96, 0.4);
     transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: #ff6b81; /* تغيير اللون لما الماوس ييجي عليه */
-    transform: scale(1.1); /* تكبير الزرار شوية */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 242, 96, 0.6);
+}
+
+/* أيقونات التواصل */
+.social-icons {
+    margin-top: 15px;
+    font-size: 24px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #00f260;
 }
